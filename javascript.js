@@ -1,6 +1,13 @@
 
-// Primera Entrega del Proyecto
+//Evento//
 
+let miFormulario = document.getElementById("formulario");
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e) {
+    e.preventDefault();
+    console.log("El formulario ha sido enviado");
+}
 
 /*
 let carrito = [];
