@@ -7,8 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel:wght@500&family=Concert+One&family=Fascinate+Inline&family=Oswald:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="root/css/index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
     <body>
@@ -20,7 +19,7 @@
                 <a class="nav-link" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="./root/pages/contacto.html">Registro</a>
+                <a class="nav-link" href="/pages/contacto.html">Registro</a>
                 </li>
             </ul>
         </div>
@@ -33,31 +32,39 @@
                     id: 1,
                     nombre: 'Papas',
                     precio: 1,
-                    imagen: 'root/img/papas.jpg'
+                    imagen: 'img/papas.jpg'
                 },
                 {
                     id: 2,
                     nombre: 'Cebolla',
                     precio: 1.2,
-                    imagen: 'root/img/cebolla.jfif'
+                    imagen: 'img/cebolla.jfif'
                 },
                 {
                     id: 3,
                     nombre: 'Calabaza',
                     precio: 2.1,
-                    imagen: 'root/img/calabaza.jfif'
+                    imagen: 'img/calabaza.jfif'
                 },
                 {
                     id: 4,
                     nombre: 'Fresas',
                     precio: 0.6,
-                    imagen: 'root/img/fresas-sabrosas.jpg'
+                    imagen: 'img/fresas-sabrosas.jpg'
                 },
                 {
                     id: 5,
                     nombre: "Bananas",
                     precio: 1.4,
+                    imagen: "img/bananas.jpg"
                 },
+                {
+                    id: 6,
+                    nombre: "Sandia",
+                    precio: 3.0,
+                    imagen: "img/sandia.jpg",
+
+                }
     
             ];
     
@@ -128,7 +135,7 @@
                 DOMtotal.textContent = calcularTotal();
             }
     
-    
+
             function borrarItemCarrito(evento) {
                 const id = evento.target.dataset.item;
                 carrito = carrito.filter((carritoId) => {
@@ -156,6 +163,8 @@
             renderizarCarrito();
             });
         </script>
+
+        
         </main>
     </body>
     
