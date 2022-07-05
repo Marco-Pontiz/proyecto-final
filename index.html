@@ -24,6 +24,7 @@
             </ul>
         </div>
         </header>
+
         <main class="m-4">
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -67,14 +68,20 @@
                 }
     
             ];
-    
             let carrito = [];
-            const divisa = '€';
-            const DOMitems = document.querySelector('#items');
-            const DOMcarrito = document.querySelector('#carrito');
-            const DOMtotal = document.querySelector('#total');
-            const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-    
+            let divisa = '€';
+            let DOMitems = document.querySelector('#items');
+            let DOMcarrito = document.querySelector('#carrito');
+            let DOMtotal = document.querySelector('#total');
+            let DOMbotonVaciar = document.querySelector('#boton-vaciar');
+            let compra = document.getElementById("boton-comprar");
+            console.log("¡Bienvenid@ a nuestro sitio web!" || "Falsy");
+            carrito.length === 0 && console.log("El carrito está vacio!");
+
+            let su_edad = parseInt(prompt("Ingrese su edad"))
+            let permiso = (su_edad >= 16) ? true : false
+            permiso ? alert("Bienvenid@") : alert("No tienes la edad suficiente para comprar en nuestro local")
+            
             function renderizarProductos() {
                 baseDeDatos.forEach((info) => {
                     const miNodo = document.createElement('div');
@@ -161,14 +168,25 @@
             DOMbotonVaciar.addEventListener('click', vaciarCarrito);
             renderizarProductos();
             renderizarCarrito();
-            });
-        </script>
+            })
 
-        
+            let usuario = {
+                nombre: "Administrador",
+                apellido: "!@W?¡"
+            }
+
+            let {nombre, apellido} = usuario
+
+            console.log(nombre);
+            console.log(apellido);
+            
+        </script>
+        <script src="js/libreria.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
+        </script>
         </main>
     </body>
-    
-</head>
 <body>
     <div class="container">
         <div class="row">
@@ -183,6 +201,7 @@
                 <!-- Precio total -->
                 <p class="text-right">Total: <span id="total"></span>&euro;</p>
                 <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                <button id="boton-comprar" class="btn btn-primary">Comprar</button>
             </aside>
         </div>
     </div>

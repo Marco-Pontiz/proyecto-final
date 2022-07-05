@@ -19,6 +19,20 @@ document.getElementById("txtemail").addEventListener("change", formulario);
 document.getElementById("txtname").addEventListener("change", formulario);
 document.getElementById("txtlastname").addEventListener("change", formulario);
 
+function registro(){
+
+    let btn = document.querySelector("#btnregistro")
+    btn.addEventListener('click', () =>{
+    Swal.fire({
+        title: '¡Te has registrado!',
+        text: '¡Tu registro se guardó con exito!',
+        icon: 'success',
+        confirmButtonText: "Aceptar",
+        timer: 2500
+    })},
+
+)}
+
 function formulario(){
     let email= document.getElementById("txtemail").value;
     localStorage.setItem("txtemail", email);
@@ -32,4 +46,4 @@ function formulario(){
 
     let valor = [email, nombre, lastname];
     console.log(valor);
-}
+};
