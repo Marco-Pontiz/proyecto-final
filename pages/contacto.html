@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Proyecto Final</title>
+    <title>NT - Contacto</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat&family=Cinzel:wght@500&family=Concert+One&family=Fascinate+Inline&family=Oswald:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel:wght@500&family=Concert+One&family=Fascinate+Inline&family=Oswald:wght@300;400&family=Playfair+Display&display=swap" rel="stylesheet">
@@ -27,25 +30,26 @@
     </header>
 
     <main>
+        <div class="container">
         <section class="s-form-container-fluid">
             <div class="row">
 
-            <form id="formulario" class="formu-container-fluid">
+            <form action="https://formsubmit.co/marcopontiz@gmail.com" method="POST" id="formulario" class="formu-container-fluid">
                 <h4 class="pb-4 mt-4">Registrate</h4>
 
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input id="txtemail" type="email" class="form-control"  aria-describedby="emailHelp">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="txtemail" type="email" name="email" class="form-control"  aria-describedby="emailHelp">
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label" >Name</label>
-                    <input id="txtname" type="name" class="form-control" >
+                    <label for="name" class="form-label" >Name</label>
+                    <input id="txtname" type="name" name="name" class="form-control" >
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Lastname</label>
-                    <input id="txtlastname" type="L-name" class="form-control">
+                    <label for="lastname" class="form-label">Lastname</label>
+                    <input id="txtlastname" type="L-name" name="L-name" class="form-control">
                 </div>
 
                 <div class="mb-3">
@@ -63,13 +67,18 @@
                     <label class="form-check-label" for="exampleCheck1">I accept the terms and conditions</label>
                 </div>
 
-                <button onclick='registro()' type="button" class="btn btn-primary mt-2" id="btnregistro">Registrate</button>
+                <input type="button" onclick='registro()'  class="btnregistro btn-estilo" id="button" value="Enviar Email">
+
             </form>
+        </div>
+
         </div>
         <script src="js/libreria.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
         </script>
+
+        
         </section>
     </main>
 

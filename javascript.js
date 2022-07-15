@@ -15,13 +15,15 @@
 /*Si quieres borrar el LocalStorage, descomentar
 localStorage.clear();*/
 
+/*----------------------------------*/
+
 document.getElementById("txtemail").addEventListener("change", formulario);
 document.getElementById("txtname").addEventListener("change", formulario);
 document.getElementById("txtlastname").addEventListener("change", formulario);
 
 function registro(){
 
-    let btn = document.querySelector("#btnregistro")
+    let btn = document.querySelector(".btnregistro")
     btn.addEventListener('click', () =>{
     Swal.fire({
         title: '¡Te has registrado!',
@@ -47,3 +49,26 @@ function formulario(){
     let valor = [email, nombre, lastname];
     console.log(valor);
 };
+
+//Ingresando fetch
+    let Email = document.getElementById('txtemail');
+    let nombre = document.getElementById('txtname');
+    let Lastname = document.getElementById('txtlastname');
+    let button = document.getElementById('button');
+
+    button.addEventListener('click', () => {
+        const data = {
+            title: nombre.value,
+            body: Email.value,
+            userId:1,
+        };
+        fetch('https://jsonplaceholder.typicode.com/posts',{
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers:{
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+    });
