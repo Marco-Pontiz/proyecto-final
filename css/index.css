@@ -1,5 +1,5 @@
 .header{
-    background-color: burlywood ;
+    background-color: rgb(81, 115, 97);
     color: white;
     padding: 0px;
     border-bottom: 5px solid brown;
@@ -10,11 +10,16 @@ header .nav-link{
 }
 
 header .h1{
-    font-family: 'Fascinate Inline', cursive;
+    font-family: 'Anton', sans-serif;
+
 }
 
 header .h2{
     font-family: 'Fascinate Inline', cursive;
+}
+
+.m-4{
+    background-color: rgb(158, 47, 40);
 }
 
 body main .formu-container-fluid {
@@ -27,8 +32,4 @@ body main .formu-container-fluid {
     border-radius: 4px;
     border: 1px solid ;
     color: #382f2f;
-}
-
-.btn-estilo {
-    
 }
